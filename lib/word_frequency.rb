@@ -1,25 +1,25 @@
 class String
-  define_method(:scrabble) do |findme|
+  define_method(:word_frequency) do |findme|
 
     final_count = 0
 
-    if(findme.length() > self.length())
-
-      final_count
-
-    else
+    if !(findme.length() > self.length())
 
       input_string = self.split()
 
-      if !(input_string.include?(findme))
+      if (input_string.include?(findme))
 
-        final_count
+          final_count.+(1)
 
-      else
+          final_count
 
-        final_count.+(1)
-
-        final_count
-
+      end
+    
+    end
+      
+    final_count  
+      
   end
 end
+
+    
