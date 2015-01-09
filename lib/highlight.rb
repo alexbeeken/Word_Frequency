@@ -1,7 +1,7 @@
 class String
-  define_method(:word_frequency) do |input_findme|
+  define_method(:highlight) do |input_findme|
     
-    final_count = 0
+    output_string = ""
     
     findme = input_findme.downcase()
     
@@ -31,15 +31,19 @@ class String
         
         if (word == findme)
          
-          final_count = final_count + 1
+          output_string.concat("<mark> #{input_word}</mark>")
           
-        end
+        else
         
+          output_string.concat(" #{input_word}")
+        
+        end
+      
       end
       
     end
     
-    final_count
+    output_string
     
   end
   
