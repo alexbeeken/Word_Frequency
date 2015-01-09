@@ -1,9 +1,5 @@
 class String
   define_method(:word_frequency) do |input_findme|
-
-    puts("================")
-    puts(input_findme)
-    puts(self)
     
     final_count = 0
     
@@ -24,31 +20,27 @@ class String
         if (word.length > 1)
           
           last_char_index = (word.length() - 1)
-
-          if (((word[last_char_index].match(/^[[:alpha:]]$/)) == nil))
           
+          if (((word[last_char_index].match(/^[[:alpha:]]$/)) == nil))
+            
             word[last_char_index] = ""
-
+            
           end
-        
+          
         end
         
         if (word == findme)
-
-           final_count = final_count + 1
+          
+          final_count = final_count + 1
           
         end
-             
-        end
-      
+        
       end
+      
+    end
     
     final_count 
     
   end
-    
+  
 end 
-  
-  
-
-    
