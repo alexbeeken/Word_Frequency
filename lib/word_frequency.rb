@@ -3,23 +3,25 @@ class String
 
     final_count = 0
 
-    if !(findme.length() > self.length())
+    if (findme.length() > self.length())
+      
+    else
+      
+      split_input_array = self.split()
+      
+      if (split_input_array.include?(findme))
+        
+        split_input_array.each do |input_word|
+     
+          if(input_word == (findme))
+          
+            final_count = final_count + 1
 
-      input_string = self.split()
-
-      if (input_string.include?(findme))
-
-          final_count.+(1)
-
-          final_count
-
+          end
+        end
       end
-    
     end
-      
     final_count  
-      
   end
 end
-
     
