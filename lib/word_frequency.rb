@@ -1,27 +1,54 @@
 class String
-  define_method(:word_frequency) do |findme|
+  define_method(:word_frequency) do |input_findme|
 
+    puts("================")
+    puts(input_findme)
+    puts(self)
+    
     final_count = 0
-
-    if (findme.length() > self.length())
+    
+    findme = input_findme.downcase()
+    
+    if !(findme.length() > self.length())
       
-    else
-      
-      split_input_array = self.split()
-      
-      if (split_input_array.include?(findme))
+      self.split().each() do |input_word|
         
-        split_input_array.each do |input_word|
-     
-          if(input_word == (findme))
+        word = input_word.downcase()
+        
+        if (((word[0].match(/^[[:alpha:]]$/)) == nil))
           
-            final_count = final_count + 1
+          word[0] = ""
+          
+        end
+        
+        if (word.length > 1)
+          
+          last_char_index = (word.length() - 1)
+
+          if (((word[last_char_index].match(/^[[:alpha:]]$/)) == nil))
+          
+            word[last_char_index] = ""
 
           end
+        
         end
+        
+        if (word == findme)
+
+           final_count = final_count + 1
+          
+        end
+             
+        end
+      
       end
-    end
-    final_count  
+    
+    final_count 
+    
   end
-end
+    
+end 
+  
+  
+
     
