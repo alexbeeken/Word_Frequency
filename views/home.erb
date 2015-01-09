@@ -1,0 +1,36 @@
+<form action='/show_results' align="center">
+
+    <div class="form-group">
+
+      <label for="input_string">
+        Enter a bunch of text:
+      </label>
+
+      <input id="input_string" name="input_string" class="form-control" type="text" size="30">
+
+      </br>
+      </br>
+
+      <label for="findme">
+        Now enter a word to search for:
+      </label>
+
+      <input id="findme" name="findme" class="form-control" type="text" size="45">
+
+    </div>
+
+  </br>
+  </br>
+
+  <button type="submit" class="btn-success">Send</button>
+
+</form>
+
+</br>
+</br>
+
+<div id="answer_box">
+
+  <%= @output_message %>
+
+</div>
