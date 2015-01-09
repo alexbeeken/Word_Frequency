@@ -20,10 +20,10 @@ get('/wf_result') do
   @input_string = @input_string.highlight(@findme)
   
   if @final_count == 0
-    @results_message = "There are no instances of the word #{@findme} (<em>not counting typos!!</em>) inside of #{@input_string}."
+    @results_message = "There are no instances of the word \"#{@findme}\" (<em>not counting typos!!</em>) inside of \"#{@input_string}.\""
 
   elsif @final_count == 1
-    @results_message = "There is one instance of the word #{@findme} (<em>not counting typos!!</em>) inside of #{@input_string}."
+    @results_message = "There is one instance of the word \"#{@findme}\" (<em>not counting typos!!</em>) inside of \"#{@input_string}.\""
   
   else
     @results_message = "There are #{@final_count} instances of the word \"#{@findme}\" inside of \"#{@input_string}.\""
