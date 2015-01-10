@@ -1,4 +1,45 @@
 
-    <%= @results_message %> 
-    <em> not </em> counting typos!!!
 
+  <div>
+
+    <%= if @final_count == 0
+        @results_message = "There are no instances of the word "
+
+        elsif @final_count == 1
+        @results_message = "There is one instance of the word "
+
+        else
+        @results_message = "There are #{@final_count} instances of the word "
+
+    end %>
+
+  </div>
+
+</br>
+
+  <div>
+
+    <%=
+        @findme
+    %>
+
+  </div>
+
+</br>
+
+    <p>inside of</p>
+
+</br>
+
+  <div>
+
+    <%=
+      @input_string
+    %>
+
+  </div>
+
+
+</br>
+
+    <em>(not counting typos!!)</em>
