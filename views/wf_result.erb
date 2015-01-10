@@ -1,37 +1,42 @@
+<div id="custom_message">
 
+  <%=
 
-  <div>
-
-    <%= if @final_count == 0
+      if @final_count == 0
         @results_message = "There are no instances of the word "
 
-        elsif @final_count == 1
+      elsif @final_count == 1
         @results_message = "There is one instance of the word "
 
-        else
+      else
         @results_message = "There are #{@final_count} instances of the word "
 
-    end %>
+      end
+  %>
 
-  </div>
+</div>
 
 </br>
 
-  <div>
+<div id="findme">
+
+  <h2>
 
     <%=
         @findme
     %>
 
-  </div>
+  </h2>
+
+</div>
 
 </br>
 
-    <p>inside of</p>
+  <p>inside of</p>
 
 </br>
 
-  <div>
+  <div id="input_text">
 
     <%=
       @input_string
