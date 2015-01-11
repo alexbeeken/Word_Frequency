@@ -1,4 +1,4 @@
-# Project Name
+# Word_Frequency
 
 Word Frequency is a website written with Ruby that counts the number of times a word appears in a block of text.
 
@@ -28,4 +28,4 @@ MIT License
 
 ## Bugs
 
-Does not search for words that contain non-alphabetic characters such as an apostrophe in the word "Don't"
+Does not search for words that contain non-alphabetic characters inside the word itself such as an apostrophe in the word "Don't".
